@@ -1,14 +1,13 @@
 {
-  "name": "@modelcontextprotocol/server-clean-code",
+  "name": "mcp-clean-code",
   "version": "0.1.0",
   "description": "MCP server for clean code planning and generation with comprehensive English comments",
   "license": "MIT",
   "author": "Aidalinfo",
   "homepage": "https://aidalinfo.fr",
-  "bugs": "https://github.com/modelcontextprotocol/servers/issues",
   "type": "module",
   "bin": {
-    "mcp-server-clean-code": "dist/index.js"
+    "mcp-clean-code": "dist/index.js"
   },
   "files": [
     "dist"

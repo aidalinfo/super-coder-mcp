@@ -1,4 +1,4 @@
-# Clean Code MCP Server
+# MCP Clean Code
 
 An MCP server implementation that provides a tool for planning and creating clean, well-structured code with comprehensive English comments.
 
@@ -46,16 +46,16 @@ The Clean Code tool is designed for:
 
 Add this to your `claude_desktop_config.json`:
 
-#### npm from GitHub
+#### npm installation
 
 ```json
 {
   "mcpServers": {
-    "clean-code": {
+    "cleancode": {
       "command": "npx",
       "args": [
         "-y",
-        "github:aidalinfo/super-coder-mcp"
+        "mcp-clean-code"
       ]
     }
   }
@@ -65,14 +65,30 @@ Add this to your `claude_desktop_config.json`:
 #### Manual installation
 
 ```bash
-# Install directly from GitHub
-npm install -g github:aidalinfo/super-coder-mcp
+# Install from npm
+npm install -g mcp-clean-code
 
 # Then use in configuration
 {
   "mcpServers": {
     "cleancode": {
-      "command": "mcp-server-clean-code"
+      "command": "mcp-clean-code"
+    }
+  }
+}
+```
+
+#### PNPM installation
+
+```bash
+# Install from npm using PNPM
+pnpm add -g mcp-clean-code
+
+# Then use in configuration
+{
+  "mcpServers": {
+    "cleancode": {
+      "command": "mcp-clean-code"
     }
   }
 }
@@ -89,7 +105,7 @@ npm install -g github:aidalinfo/super-coder-mcp
         "run",
         "--rm",
         "-i",
-        "mcp/cleancode"
+        "mcp-clean-code"
       ]
     }
   }
@@ -101,7 +117,18 @@ npm install -g github:aidalinfo/super-coder-mcp
 Docker:
 
 ```bash
-docker build -t mcp/cleancode .
+docker build -t mcp-clean-code .
+```
+
+From source:
+```bash
+# Clone the repository
+git clone https://github.com/your-username/mcp-clean-code.git
+cd mcp-clean-code
+
+# Install dependencies and build
+pnpm install
+pnpm build
 ```
 
 ## GitHub Actions CI/CD
@@ -137,4 +164,4 @@ The GitHub Actions workflow will automatically trigger, build the package, and p
 
 ## License
 
-This MCP server is licensed under the MIT License. This means you are free to use, modify, and distribute the software, subject to the terms and conditions of the MIT License. For more details, please see the LICENSE file in the project repository.
+This MCP server is licensed under the MIT License and is developed by Aidalinfo (https://aidalinfo.fr). You are free to use, modify, and distribute the software, subject to the terms and conditions of the MIT License.
