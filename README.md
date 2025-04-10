@@ -104,6 +104,37 @@ Docker:
 docker build -t mcp/cleancode .
 ```
 
+## GitHub Actions CI/CD
+
+This repository includes a GitHub Actions workflow that automatically publishes the package to npm when a new release is created.
+
+### Setting up for automatic npm publishing
+
+To enable automatic publishing to npm, you need to add an NPM_TOKEN secret to your GitHub repository:
+
+1. Generate an npm access token:
+   - Go to npmjs.com and log in
+   - Click on your profile picture in the top right corner and select "Access Tokens"
+   - Click "Generate New Token" and choose the "Publish" option
+   - Copy the generated token
+
+2. Add the token to your GitHub repository:
+   - Go to your GitHub repository
+   - Click on "Settings" > "Secrets and variables" > "Actions"
+   - Click "New repository secret"
+   - Name: `NPM_TOKEN`
+   - Value: Paste the token you copied from npm
+   - Click "Add secret"
+
+3. Create a new release:
+   - Go to your GitHub repository
+   - Click on "Releases" > "Create a new release"
+   - Choose a tag version (e.g., v1.0.0)
+   - Add a release title and description
+   - Click "Publish release"
+
+The GitHub Actions workflow will automatically trigger, build the package, and publish it to npm.
+
 ## License
 
 This MCP server is licensed under the MIT License. This means you are free to use, modify, and distribute the software, subject to the terms and conditions of the MIT License. For more details, please see the LICENSE file in the project repository.
