@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "description": "MCP server for clean code planning and generation with comprehensive English comments",
   "license": "MIT",
-  "author": "Anthropic, PBC (https://anthropic.com)",
-  "homepage": "https://modelcontextprotocol.io",
+  "author": "Aidalinfo",
+  "homepage": "https://aidalinfo.fr",
   "bugs": "https://github.com/modelcontextprotocol/servers/issues",
   "type": "module",
   "bin": {

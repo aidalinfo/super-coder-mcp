@@ -46,7 +46,7 @@ The Clean Code tool is designed for:
 
 Add this to your `claude_desktop_config.json`:
 
-#### npx
+#### npm from GitHub
 
 ```json
 {
@@ -55,8 +55,24 @@ Add this to your `claude_desktop_config.json`:
       "command": "npx",
       "args": [
         "-y",
-        "@modelcontextprotocol/server-clean-code"
+        "github:aidalinfo/super-coder-mcp"
       ]
+    }
+  }
+}
+```
+
+#### Manual installation
+
+```bash
+# Install directly from GitHub
+npm install -g github:aidalinfo/super-coder-mcp
+
+# Then use in configuration
+{
+  "mcpServers": {
+    "cleancode": {
+      "command": "mcp-server-clean-code"
     }
   }
 }
